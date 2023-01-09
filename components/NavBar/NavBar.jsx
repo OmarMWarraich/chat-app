@@ -10,7 +10,7 @@ import images from '../../assets';
 const NavBar = () => {
   const menuItems = [
     {
-      menu: "All Users",
+      menu: "Users",
       link: "allUsers"
     },
     {
@@ -30,7 +30,7 @@ const NavBar = () => {
       link: "/"
     },
     {
-      menu: "Terms & Conditions",
+      menu: "T & Cs",
       link: "/"
     }
   ];
@@ -42,7 +42,7 @@ const NavBar = () => {
 
   // UseContext
 
-  const { account, userName, connectWallet } = useContext(ChatAppContext);
+  const { account, userName, connectWallet, createAccount, error } = useContext(ChatAppContext);
 
   return (
     <div className={styles.NavBar}>
@@ -84,9 +84,9 @@ const NavBar = () => {
                 <Image 
                   src={images.close} 
                   alt="close" 
-                  width={50} 
-                  height={50}
-                  onClick={() => setOpen(false)}
+                  width={30} 
+                  height={30}
+                  onClick={() => setOpen(!open)}
                 />
               </p>
         </div>
@@ -102,7 +102,7 @@ const NavBar = () => {
           ) : (
             <button onClick={() => setOpenModel(true)}>
               {" "}
-              <Image src={userName ? images.accountName : images.create2} alt="user" width={20} height={20} />
+              <Image src={userName ? images.accountName : images.create2} alt="user" width={25} height={25} />
               {" "}
               <small>{userName || "Create Account"}</small>
             </button>
@@ -113,11 +113,27 @@ const NavBar = () => {
             className={styles.NavBar_box_right_open}
             onClick={() => setOpen(!open)}
           >
-            <Image src={images.open} alt="open" width={50} height={50} />
+            <Image src={images.open} alt="open" width={40} height={40} />
           </div>
       </div>
     </div>
-    </div>
+    {/* Model Component */}
+    {!openModel && (
+      <div className={styles.modelBox}>
+        <Model 
+          openModel={setOpenModel}
+          title="Welcome To"
+          head="CHAIN MESSENGER"
+          info="Create your account to start chatting with your friends."
+          smallInfo="Kindly note that you can only create one account per wallet address."
+          images={images.hero}
+          functionName={createAccount}
+        />
+      </div>
+    )}
+    {/* Error Component */}
+    {error == "" ? "" : <Error error={error} />}
+  </div>
 );
 };
 
