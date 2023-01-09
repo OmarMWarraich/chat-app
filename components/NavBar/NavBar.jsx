@@ -48,7 +48,7 @@ const NavBar = () => {
     <div className={styles.NavBar}>
       <div className={styles.NavBar_box}>
         <div className={styles.NavBar_box_left}>
-          <Image src={images.logo} alt="logo" width={50} height={50} />
+          <Image src={images.logo} alt="logo" width={40} height={40} />
         </div>
         <div className={styles.NavBar_box_right}>
           {/* Desktop */}
@@ -70,7 +70,7 @@ const NavBar = () => {
             <div className={styles.NavBar_box_right_menu_mobile}>
               {menuItems.map((item, index) => (
                 <div onClick={() => setActive(index + 1)} key={index + 1}
-                className={active === (index + 1) ? styles.NavBar_box_right_menu_active : styles.NavBar_box_right_menu_item}>
+                className={active === (index + 1) ? styles.NavBar_box_right_menu_active : styles.NavBar_box_right_menu_item_mobile}>
                   <Link
                     className={styles.NavBar_box_right_menu_item_link}
                     href={item.link}
@@ -86,7 +86,7 @@ const NavBar = () => {
                   alt="close" 
                   width={30} 
                   height={30}
-                  onClick={() => setOpen(!open)}
+                  onClick={() => setOpen(false)}
                 />
               </p>
         </div>
@@ -111,14 +111,14 @@ const NavBar = () => {
           
           <div 
             className={styles.NavBar_box_right_open}
-            onClick={() => setOpen(!open)}
+            onClick={() => setOpen(true)}
           >
             <Image src={images.open} alt="open" width={40} height={40} />
           </div>
       </div>
     </div>
     {/* Model Component */}
-    {!openModel && (
+    {openModel && (
       <div className={styles.modelBox}>
         <Model 
           openBox={setOpenModel}
@@ -134,6 +134,7 @@ const NavBar = () => {
     )}
     {/* Error Component */}
     {error == "" ? "" : <Error error={error} />}
+    
   </div>
 );
 };

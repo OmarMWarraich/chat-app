@@ -9,13 +9,14 @@ import { Loader } from '../../components/index';
 
 const Model = ({
   openBox,
-  address,
   title,
+  address,
   head, 
   info, 
   smallInfo, 
   image, 
-  functionName}) => {
+  functionName,
+}) => {
 
     // UseState
     const [name, setName] = useState("");
@@ -28,7 +29,13 @@ const Model = ({
     <div className={styles.Model}>
       <div className={styles.Model_box}>
         <div className={styles.Model_box_left}>
-          <Image src={image} alt="logo" width={700} height={700} />
+          <Image 
+            src={image} 
+            alt="logo" 
+            width={700} 
+            height={700}
+            className={styles.Model_box_left_image} 
+          />
         </div>
         <div className={styles.Model_box_right}>
           <h1>
