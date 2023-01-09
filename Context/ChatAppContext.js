@@ -126,12 +126,15 @@ export const ChatAppProvider = ({ children }) => {
 
     return(
         // UseState
-        <ChatAppContext.Provider value={{ 
+        <ChatAppContext.Provider 
+          value={{ 
             readMessage, 
             createAccount, 
             addFriends, 
             sendMsg, 
             readUserInfo,
+            connectWallet,
+            checkIfWalletIsConnected,
             account,
             userName,
             friendLists,

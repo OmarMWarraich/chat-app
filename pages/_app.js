@@ -8,6 +8,7 @@ import { NavBar } from '../components/index';
 const MyApp = ({ Component, pageProps }) => (
   <div>
     <ChatAppProvider>
+      <NavBar />
       <Component {...pageProps} />
     </ChatAppProvider>
   </div> 
