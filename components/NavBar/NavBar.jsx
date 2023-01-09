@@ -121,13 +121,14 @@ const NavBar = () => {
     {!openModel && (
       <div className={styles.modelBox}>
         <Model 
-          openModel={setOpenModel}
+          openBox={setOpenModel}
           title="Welcome To"
           head="CHAIN MESSENGER"
           info="Create your account to start chatting with your friends."
           smallInfo="Kindly note that you can only create one account per wallet address."
-          images={images.hero}
+          image={images.hero}
           functionName={createAccount}
+          address={account}
         />
       </div>
     )}
