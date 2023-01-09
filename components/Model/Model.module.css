@@ -1,0 +1,98 @@
+
+.Model {
+    width: 85%;
+    margin: 1rem auto;
+    margin-top: 0;
+}
+
+.Model_box {
+    display: flex;
+    align-items: center;
+}
+
+.Model_box_right h1 {
+    font-size: 3rem;
+    color: #F18303;
+    line-height: 0.9;
+}
+
+.Model_box_right h1 span {
+    display: block;
+    font-size: 5rem;
+}
+
+.Model_box_right small {
+    font-size: 1.2rem;
+    color: #F18303;
+}
+
+.Model_box_right_name_info {
+    display: flex;
+    align-items: center;
+    margin-block: 1rem;
+    gap: 1rem;
+    background-color: rgba(0, 0, 0, 0.25);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.Model_box_right_name_info input {
+    width: 100%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: #F18303;
+}
+
+.Model_box_right_name_btn {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.Model_box_right_name_btn button {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: #F18303;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 0, 0.25);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 35em) {
+    .Model {
+        width: 95%;
+    }
+    .Model_box {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .Model_box_right h1 {
+        font-size: 1rem;
+        line-height: 1.2;
+    }
+    .Model_box_right h1 span {
+        font-size: 2.5rem;
+    }
+    .Model_box_right_name_btn {
+        display: grid;
+        grid-template-columns: 1fr;
+        z-index: 111111;
+        line-height: .9;
+    }
+    .Model_box_left_image {
+        width: 270px;
+        height: 270px;
+    }
+}
+    
