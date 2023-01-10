@@ -66,7 +66,7 @@
 .modelBox {
     position: fixed;
     inset: 0 0 0 0;
-    background-color: #292F3F;
+    background-color: #778899;
     z-index: 77777777;
 }
 
@@ -94,7 +94,7 @@
     .NavBar_box_right_menu {
         position: fixed;
         z-index: 111111;
-        background-color: #292F3F;
+        background-color: #778899;
         width: 100%;
         flex-direction: column;
         height: 100vh;
@@ -107,7 +107,7 @@
         display: block;
         position: fixed;
         z-index: 111111;
-        background-color: #292F3F;
+        background-color: #778899;
         inset: 0 0 0 0;
         text-align: center;
         padding-top: 4rem;

@@ -43,7 +43,11 @@ const Model = ({
           </h1>
           <p>{info}</p>
           <small>{smallInfo}</small>
-          <div className={styles.Model_box_right_name}>
+
+          {loading == true ? (
+            <Loader />
+          ) : (
+            <div className={styles.Model_box_right_name}>
             <div className={styles.Model_box_right_name_info}>
               <Image src={images.user_name} alt="user" width={30} height={30} />
               <input
@@ -75,6 +79,7 @@ const Model = ({
               </button>
             </div>
           </div>
+          ) }
         </div>
       </div>
     </div>

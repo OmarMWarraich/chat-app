@@ -10,6 +10,11 @@
     align-items: center;
 }
 
+.Model_box_left_image {
+    margin-left: -100px;
+    margin-right: 50px;
+}
+
 .Model_box_right h1 {
     font-size: 3rem;
     color: #F18303;
@@ -93,6 +98,7 @@
     .Model_box_left_image {
         width: 270px;
         height: 270px;
+        margin: 0;
     }
 }
     
