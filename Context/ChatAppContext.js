@@ -22,7 +22,7 @@ export const ChatAppProvider = ({ children }) => {
     const [friendMsg, setFriendMsg] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState("");
-    const [userList, setUserList] = useState([]);
+    const [userLists, setUserLists] = useState([]);
 
     // Chat User Data
     const [currentUserName, setCurrentUserName] = useState("");
@@ -37,17 +37,17 @@ export const ChatAppProvider = ({ children }) => {
             // Get Contract
             const contract = await connectingWithContract();
             // Get Account
-            const createdAccount = await connectWallet();
-            setAccount(createdAccount);
+            const connectAccount = await connectWallet();
+            setAccount(connectAccount);
             // Get User Name
-            const userName = await contract.getUsername(createdAccount);
+            const userName = await contract.getUsername(connectAccount);
             setUserName(userName);
             // Get Friend List
-            const friendLists = await contract.getMyfriendList(createdAccount);
+            const friendLists = await contract.getMyfriendList();
             setFriendLists(friendLists);
             // Get User List
-            const userList = await contract.getAllAppUser();
-            setUserList(userList);
+            const userLists = await contract.getAllAppUser();
+            setUserLists(userLists);
         } catch (error) {
             setError("Please Install and Connect Metamask");
             console.log(error);
@@ -87,7 +87,7 @@ export const ChatAppProvider = ({ children }) => {
     // Add Friends
     const addFriends = async (accountAddress, name) => {
         try {
-            if ((name || accountAddress) === "") return setError("Please fill all the fields.");
+            // if ((name || accountAddress) === "") return setError("Please fill all the fields.");
 
             const contract = await connectingWithContract();
             const getAddedFriend = await contract.addFriend(accountAddress, name);
@@ -140,7 +140,7 @@ export const ChatAppProvider = ({ children }) => {
             userName,
             friendLists,
             friendMsg,
-            userList,
+            userLists,
             error,
             loading,
             currentUserName,

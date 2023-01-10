@@ -13,17 +13,16 @@ import file from './file.png';
 import friend1 from './friend1.png';
 import friend2 from './friend2.png';
 import hero from './hero.png';
-import img1 from './img1.jpeg';
-import img2 from './img2.gif';
-import img3 from './img3.gif';
-import img4 from './img4.gif';
-import img5 from './img5.gif';
-import img6 from './img6.gif';
-import img7 from './img7.gif';
-import img8 from './img8.gif';
-import img9 from './img9.gif';
-import img10 from './img10.gif';
-import img11 from './img11.gif';
+import image1 from './img1.gif';
+import image2 from './img2.gif';
+import image3 from './img3.gif';
+import image4 from './img4.gif';
+import image5 from './img5.gif';
+import image6 from './img6.gif';
+import image7 from './img7.gif';
+import image8 from './img8.gif';
+import image9 from './img9.gif';
+import image10 from './img10.gif';
 import loader from './loader.gif';
 import Loader from './Loader.png';
 import open from './open.png';
@@ -49,17 +48,16 @@ export default {
     friend1,
     friend2,
     hero,
-    img1,
-    img2,
-    img3,
-    img4,
-    img5,
-    img6,
-    img7,
-    img8,
-    img9,
-    img10,
-    img11,
+    image1,
+    image2,
+    image3,
+    image4,
+    image5,
+    image6,
+    image7,
+    image8,
+    image9,
+    image10,
     loader,
     Loader,
     open,
