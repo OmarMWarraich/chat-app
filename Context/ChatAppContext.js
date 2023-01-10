@@ -40,14 +40,14 @@ export const ChatAppProvider = ({ children }) => {
             const createdAccount = await connectWallet();
             setAccount(createdAccount);
             // Get User Name
-            const userName = await contract.getUserName(createdAccount);
+            const userName = await contract.getUsername(createdAccount);
             setUserName(userName);
             // Get Friend List
-            /* const friendLists = await contract.getFriendList(createdAccount);
-            setFriendLists(friendLists); */
+            const friendLists = await contract.getMyfriendList(createdAccount);
+            setFriendLists(friendLists);
             // Get User List
-            /* const userList = await contract.getAllUsersFunc();
-            setUserList(userList); */
+            const userList = await contract.getAllAppUser();
+            setUserList(userList);
         } catch (error) {
             setError("Please Install and Connect Metamask");
             console.log(error);
