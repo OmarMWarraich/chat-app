@@ -43,13 +43,14 @@ export const ChatAppProvider = ({ children }) => {
             const userName = await contract.getUserName(createdAccount);
             setUserName(userName);
             // Get Friend List
-            const friendLists = await contract.getFriendList(createdAccount);
-            setFriendLists(friendLists);
+            /* const friendLists = await contract.getFriendList(createdAccount);
+            setFriendLists(friendLists); */
             // Get User List
-            const userList = await contract.getAllUsersFunc();
-            setUserList(userList);
+            /* const userList = await contract.getAllUsersFunc();
+            setUserList(userList); */
         } catch (error) {
             setError("Please Install and Connect Metamask");
+            console.log(error);
         }
     }
     useEffect(() => {
@@ -70,7 +71,7 @@ export const ChatAppProvider = ({ children }) => {
     // Create Account
     const createAccount = async ({ name }) => {
         try {
-            if ((name ) === "") return setError("Please fill all the fields.");
+            // if ((name ) === "") return setError("Please fill all the fields.");
 
             const contract = await connectingWithContract();
             const getCreatedUser = await contract.createAccount(name);
