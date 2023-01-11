@@ -71,7 +71,7 @@
 
     .Filter_model {
         position: absolute;
-        inset: 0 0 70% 0;
+        inset: 0 0 -70% 0;
     }
 
     .Filter_box_right button {
