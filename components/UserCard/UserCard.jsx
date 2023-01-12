@@ -6,7 +6,7 @@ import styles from "./UserCard.module.css";
 import images from "../../assets";
 
 const UserCard = ({ user, index, addFriends }) => {
-  console.log(user)
+  // console.log(user)
   return (
     <div className={styles.UserCard}>
       <div className={styles.UserCard_box}>
