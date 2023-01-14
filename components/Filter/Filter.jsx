@@ -9,7 +9,6 @@ import { Model } from '../index';
 
 const Filter = () => {
   const { account, addFriends } = useContext(ChatAppContext);
-  // const {} = useContext(ChatAppContext);
 
   // UseState
   const [ addFriend, setAddFriend ] = useState(false);
