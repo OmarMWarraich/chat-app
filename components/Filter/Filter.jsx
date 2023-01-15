@@ -12,7 +12,6 @@ const Filter = () => {
 
   // UseState
   const [ addFriend, setAddFriend ] = useState(false);
-
   return (
     <div className={styles.Filter}>
       <div className={styles.Filter_box}>

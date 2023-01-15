@@ -1,0 +1,26 @@
+.friend {
+    width: 80%;
+    margin: 1rem auto;
+}
+
+.friend_box {
+    display: grid;
+    grid-template-columns: 1.4fr 3fr;
+    gap: 2rem;
+}
+
+.friend_box_left {
+    background-color: rgba(0, 0, 0, 0.25);
+    padding: 1rem;
+    border-radius: 0.5rem;
+}
+
+@media screen and (max-width: 35em) {
+    .friend {
+        width: 90%;
+    }
+    .friend_box {
+        grid-template-columns: 1fr;
+    }
+}
+    

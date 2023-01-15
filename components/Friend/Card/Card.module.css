@@ -1,0 +1,22 @@
+.card_box {
+    display: flex;
+    align-items: center;
+    line-height: 0;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 1px solid #eaeaea;
+    cursor: pointer;
+}
+
+.card_box_right {
+    display: flex;
+    gap: 3rem;
+}
+
+.card_box_right_middle {
+    margin-top: -1.2rem;
+}
+
+.card_box_left {
+    border-radius: 50%;
+}

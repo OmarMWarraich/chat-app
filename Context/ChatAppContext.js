@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react'
-import { useRouter } from 'next/router'
+import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
 
 //INTERNAL IMPORT
 import {
@@ -8,7 +8,7 @@ import {
   connectingWithContract,
 } from '../Utils/apiFeature'
 
-export const ChatAppContext = React.createContext()
+export const ChatAppContext = React.createContext();
 
 export const ChatAppProvider = ({ children }) => {
   //USESTATE
