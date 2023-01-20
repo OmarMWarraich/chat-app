@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 // Internal Imports
 import styles from './Card.module.css';
-import images from '../../assets/images';
+import images from '../../../assets';
 
 const Card = ({ readMessage, el, i, readUser }) => {
     console.log(el)

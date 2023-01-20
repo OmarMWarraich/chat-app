@@ -3,10 +3,10 @@ import Image from 'next/image';
 
 // Internal Imports
 
-import styles from './Friend.module.scss';
-import images from '../../assets/images';
-import Card from '../Card/Card';
-import Chat from '../Chat/Chat';
+import styles from './Friend.module.css';
+import images from '../../assets';
+import Card from './Card/Card';
+import Chat from './Chat/Chat';
 import { ChatAppContext } from '../../Context/ChatAppContext';
 
 const Friend = () => {

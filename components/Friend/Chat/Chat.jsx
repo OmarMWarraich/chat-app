@@ -3,9 +3,9 @@ import Image from 'next/image';
 import { useRouter } from 'next/router';
 
 // Internal Imports
-import styles from './Card.module.css';
-import images from '../../assets/images';
-import { convertTime } from '../../utils/apiFeature';
+import styles from './Chat.module.css';
+import images from '../../../assets';
+import { convertTime } from '../../../Utils/apiFeature'
 import { Loader } from '../../index';
 
 const Chat = ({
