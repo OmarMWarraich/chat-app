@@ -2,7 +2,6 @@
 
 <div align="center">
 
-  <img src="O-vaCorps.png" alt="logo" width="140"  height="auto" />
   <br/>
 
   <h3><b>README</b></h3>
